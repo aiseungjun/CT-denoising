@@ -1,0 +1,23 @@
+dataset:
+  data_dir: '/Dataset'
+  augment: true
+  batch_size: 16
+
+model:
+  name: redcnn
+
+optimizer:
+  name: ADAM
+  lr: 1.e-4
+  milestones: [20, 40, 60, 80]
+  gamma: 0.5
+  weight_decay: 0
+
+epochs: 100
+test_every: 1
+save_models: false
+resume: -1
+
+n_threads: 8
+cpu: false
+seed: 1
